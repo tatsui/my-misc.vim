@@ -1,0 +1,109 @@
+snippet movl
+	movl ${1:eax}, ${2:eax}
+
+snippet movzx
+	movzx ${1:eax}, ${2:eax}
+
+snippet mov
+	mov ${1:eax}, ${2:eax}
+
+snippet lea
+	lea ${1:eax}, [${2:eax}]
+
+snippet add
+	add ${1:eax}, ${2:1}
+
+snippet sub
+	sub ${1:eax}, ${2:1}
+
+snippet mul
+	mul ${1:eax}, ${2:1}
+
+snippet div
+	div ${1:eax}, ${2:1}
+
+snippet cmp
+	cmp ${1:eax}, ${2:eax}
+
+snippet test
+	test ${1:eax}, ${2:eax}
+
+snippet xor
+	xor ${1:eax}, ${2:eax}
+
+snippet or
+	or ${1:eax}, ${2:eax}
+
+snippet not
+	not ${1:eax}
+
+snippet inc
+	inc ${1:eax}
+
+snippet dec
+	dec ${1:eax}
+
+snippet int
+	int ${1:0x80}
+
+snippet pop
+	pop ${1:eax}
+
+snippet push
+	push ${1:eax}
+
+snippet jmp
+	jmp ${1:eax}
+
+snippet string
+	${1:str}: db "${2:hello}", 0x0a
+
+snippet byte
+	byte ptr [${1:eax}]
+
+snippet word
+	word ptr [${1:eax}]
+
+snippet dword
+	dword ptr [${1:eax}]
+
+snippet call
+	call ${1:LABEL}
+
+
+snippet jo_OF=1
+	jo ${1:eax}
+snippet jno_OF=0
+	jno ${1:eax}
+snippet jnae_CF=1
+	jnae ${1:eax}
+snippet jnb_CF=0
+	jnb ${1:eax}
+snippet jz_ZF=0
+	jz ${1:eax}
+snippet jnz_ZF=1
+	jnz ${1:eax}
+snippet jna_CF=1_and_ZF=1
+	jna ${1:eax}
+snippet jnbe_CF=0_and_ZF=0
+	jnbe ${1:eax}
+snippet js_SF=1
+	js ${1:eax}
+snippet jns_SF=0
+	jns ${1:eax}
+snippet jpe_PF=1
+	jpe ${1:eax}
+snippet jnp_PF=0
+	jnp ${1:eax}
+snippet jnge_SF≠OF
+	jnge ${1:eax}
+snippet jnl_SF=OF
+	jnl ${1:eax}
+snippet jng_ZF=1_or_SF≠OF
+	jng ${1:eax}
+snippet jnle_ZF=0_and_SF=OF
+	jnle ${1:eax}
+snippet jcxz_CX=0
+	jcxz ${1:eax}
+snippet jecxz_EAX=0
+	jecxz ${1:eax}
